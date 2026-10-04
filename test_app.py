@@ -23,4 +23,6 @@ def test_greet(client):
     r = client.get('/greet/SGU')
     assert 'Hello, SGU!' in r.get_json()['message']
 
-    
+def test_sum(client):
+    r = client.get('/sum/3/4')
+    assert r.get_json()['result'] == 7    
