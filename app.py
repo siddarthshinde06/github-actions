@@ -17,8 +17,10 @@ def square(n):
 def greet(name):
     return jsonify({'message': f'Hello, {name}!'})
 
+
 @app.route('/sum/<int:a>/<int:b>')
-def sum_nums(a, b): return jsonify({'result': a + b})
+def sum_nums(a, b):
+    return jsonify({'result': a + b})
 
 
 if __name__ == '__main__':
